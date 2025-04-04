@@ -166,3 +166,53 @@ Planning and preparing to integrate Google Fonts.
 
 ### Next Actions
 - [ ] Add the Google Fonts link to the `index.html` file.
+
+---
+# Current Issue Tracking
+
+## Issue Details
+Issue #: 4
+Title: Setup: Port Base Styles and Custom CSS Classes
+Description:
+The task involves porting the base styles and custom CSS classes from the `site-rough` directory into the `trustyowl-site` directory. This includes ensuring that the styles are compatible with the current setup and do not conflict with Tailwind CSS.
+
+## Acceptance Criteria
+- [x] Port the base styles from `site-rough/style.css` to `trustyowl-site/src/style.css`.
+- [x] Ensure compatibility with Tailwind CSS.
+- [x] Verify that the styles are applied correctly in the project.
+
+## Implementation Plan
+### Current Status: Complete
+
+### Steps
+1. [x] Review the existing styles in `/storage/assets/trustyowl/site-rough/style.css`.
+    - Details: Identified the base styles and custom CSS classes to be ported.
+    - Files to modify: None (inspection only).
+    - Status: Complete
+    - Notes: Identified CSS variables, typography styles, custom component classes, animations, and responsive utilities.
+
+2. [x] Port the styles to `trustyowl-site/src/style.css`.
+    - Details: Integrated the styles with Tailwind CSS directives.
+    - Files to modify: `src/style.css`.
+    - Status: Complete
+    - Notes: Used Tailwind's @layer directives to properly integrate custom classes.
+
+3. [x] Verify that the styles are applied correctly in the project.
+    - Details: Updated App.vue to test the custom styles.
+    - Files to modify: `src/App.vue`.
+    - Status: Complete
+    - Notes: Created a simple layout that demonstrates the custom styles working with Tailwind.
+
+### Current Activity
+Completed the task of porting base styles and custom CSS classes. All acceptance criteria have been met.
+
+### Blockers/Questions
+- [x] None identified at this stage.
+
+### Recent Updates
+[April 4, 2025 10:30] - Completed review of existing styles
+[April 4, 2025 11:00] - Completed porting styles to src/style.css
+[April 4, 2025 11:30] - Verified styles work correctly with sample component
+
+### Next Actions
+- Update progress.md with task completion

@@ -2,87 +2,122 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Custom Base Styles */
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+  --color-primary: #39547b;
+  --color-secondary: #34a0a4;
+  --color-accent: #f72585;
+  --color-background: #f8f9fa;
+  --color-text: #333333;
+  --color-light: #ffffff;
+  --color-dark: #212529;
+  --color-muted: #6c757d;
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Poppins', sans-serif;
+  --transition-standard: all 0.3s ease-in-out;
 }
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-  font-family: 'Poppins', sans-serif;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+  font-family: var(--font-body);
+  color: var(--color-text);
+  background-color: var(--color-background);
+  line-height: 1.6;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Playfair Display', serif;
+  font-family: var(--font-heading);
+  line-height: 1.2;
+  margin-bottom: 0.5em;
+  font-weight: 700;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+h1 {
+  font-size: 2.5rem;
 }
 
-.card {
-  padding: 2em;
+h2 {
+  font-size: 2rem;
 }
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+h3 {
+  font-size: 1.75rem;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+h4 {
+  font-size: 1.5rem;
+}
+
+/* Custom Component Classes */
+@layer components {
+  .btn {
+    @apply px-6 py-2 rounded-md font-semibold transition-all duration-300;
   }
-  a:hover {
-    color: #747bff;
+  
+  .btn-primary {
+    @apply bg-blue-600 text-white hover:bg-blue-700;
   }
-  button {
-    background-color: #f9f9f9;
+  
+  .btn-secondary {
+    @apply bg-teal-500 text-white hover:bg-teal-600;
+  }
+  
+  .btn-accent {
+    @apply bg-pink-600 text-white hover:bg-pink-700;
+  }
+  
+  .card {
+    @apply bg-white rounded-lg shadow-md p-6 transition-all duration-300;
+  }
+  
+  .card-hover {
+    @apply hover:shadow-lg transform hover:-translate-y-1;
+  }
+  
+  .section {
+    @apply py-16 px-4 md:px-8;
+  }
+  
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+}
+
+/* Custom Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.slide-up {
+  animation: slideUp 0.5s ease-in-out;
+}
+
+/* Responsive Utilities */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .text-pretty {
+    text-wrap: pretty;
   }
 }

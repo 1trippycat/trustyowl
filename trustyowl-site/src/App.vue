@@ -1,30 +1,33 @@
-<script setup>
-import HelloWorld from './components/HelloWorld.vue'
-</script>
-
+<!-- filepath: trustyowl-site/src/App.vue -->
 <template>
-  <div>
-    <a href="https://vite.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
+  <div class="container-custom">
+    <section class="section">
+      <h1 class="fade-in">Trusty Owl</h1>
+      <p class="slide-up">Workflow and process automation for small to medium businesses</p>
+      
+      <div class="card card-hover my-8">
+        <h3>Our Services</h3>
+        <p>We help businesses scale their operations and profit with AI-powered automation.</p>
+        <button class="btn btn-primary mt-4">Learn More</button>
+      </div>
+      
+      <div class="flex flex-col md:flex-row gap-6 mt-12">
+        <div class="card flex-1">
+          <h4>Process Automation</h4>
+          <p>Streamline your business processes with our smart automation tools.</p>
+          <button class="btn btn-secondary mt-4">Explore</button>
+        </div>
+        
+        <div class="card flex-1">
+          <h4>AI Integration</h4>
+          <p>Leverage the power of AI to optimize your business operations.</p>
+          <button class="btn btn-accent mt-4">Discover</button>
+        </div>
+      </div>
+    </section>
   </div>
-  <HelloWorld msg="Vite + Vue" />
 </template>
 
-<style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
-</style>
+<script setup lang="ts">
+// No additional script needed for this example
+</script>
