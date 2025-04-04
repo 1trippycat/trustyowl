@@ -1,39 +1,66 @@
-# Scratchpad
+# Current Issue Tracking
 
-## Current Task: Fix QuickBooks API Testing (Issue #2)
+## Issue Details
+Issue #: 1
+Title: Setup: Initialize Vite + Vue 3 Project
+Description:
+The task involves creating a new project using Vite with the Vue 3 template. After completing the setup, relevant documentation files (project.md, .github/progress.md, architecture.md) need to be updated with decisions and status.
 
-### Analysis
-- Tests were failing with error `TypeError: 'coroutine' object is not subscriptable`
-- The issue was related to how async mocks were being configured in the `test_quickbooks.py` file
-- Tests are trying to validate QuickBooks OAuth token exchange and company info retrieval functionality
+## Acceptance Criteria
+- [ ] Initialize a Vite + Vue 3 project in the `trustyowl/trustyowl-site` directory.
+- [ ] Ensure the project uses the Vue 3 Composition API.
+- [ ] Update `project.md` with the setup details.
+- [ ] Update `.github/progress.md` with the task status.
+- [ ] Update `architecture.md` with any relevant architectural decisions.
 
-### Background
-- QuickBooks integration is a core feature of PocketCFO, providing access to user's accounting data
-- Backend uses httpx for async HTTP requests to QuickBooks API
-- Tests need to properly mock these async responses
-
-### Key Files Involved
-- `backend/tests/test_quickbooks.py` - Main test file that needed fixing
-- `backend/api/clients/quickbooks.py` - Contains the actual QuickBooks client implementation
-- `backend/api/services/quickbooks.py` - Higher-level service that uses the client
-
-### Fixed Tests
-1. `test_exchange_code_for_tokens` - Testing OAuth code exchange
-   - Fixed by adding the `realm_id` field to the mock response
-2. `test_exchange_code_for_tokens_success` - Alternative test for OAuth success case
-   - This test was working correctly after fixing the client code
-3. `test_exchange_code_for_tokens_request_error` - Testing error handling for network issues
-   - Fixed by using `httpx.RequestError` instead of generic `Exception` for side effect
+## Implementation Plan
+### Current Status: Planning Phase
 
 ### Steps
-- [x] Fix the AsyncMock configuration for the `response.json()` method
-- [x] Update tests to properly handle awaitable coroutines
-- [x] Ensure all tests follow best practices for async testing with pytest-asyncio
-- [x] Verify all tests pass when run inside the Docker container
-- [ ] Consider adding additional tests for the QuickBooks client in the future
+1. [ ] Verify the current state of the `trustyowl-site` directory to ensure no conflicting setup exists.
+    - Details: Check for existing Vite or Vue configurations.
+    - Files to modify: None (inspection only).
+    - Status: Not Started
+    - Notes: Ensure the directory is ready for a new Vite + Vue 3 setup.
 
-### Current Progress
-- We've fixed the missing `await` keyword in the `exchange_code_for_tokens` method
-- All tests are now passing successfully
-- We've documented best practices for testing async code in the project documentation
+2. [ ] Initialize a new Vite project with the Vue 3 template.
+    - Details: Use the `npm create vite@latest` command to set up the project.
+    - Files to modify: Entire `trustyowl-site` directory.
+    - Status: Not Started
+    - Notes: Ensure the setup aligns with the acceptance criteria.
 
+3. [ ] Configure the project to use the Vue 3 Composition API.
+    - Details: Verify and update the project files to ensure the Composition API is used.
+    - Files to modify: `vite.config.js`, `src/main.js`, and other relevant files.
+    - Status: Not Started
+    - Notes: Follow best practices for Vue 3 projects.
+
+4. [ ] Update `project.md` with the setup details.
+    - Details: Document the Vite + Vue 3 setup process and decisions.
+    - Files to modify: `project.md`.
+    - Status: Not Started
+    - Notes: Include any relevant commands and configurations.
+
+5. [ ] Update `.github/progress.md` with the task status.
+    - Details: Add a summary of the completed task and any learnings.
+    - Files to modify: `.github/progress.md`.
+    - Status: Not Started
+    - Notes: Ensure the progress is clearly documented.
+
+6. [ ] Update `architecture.md` with any relevant architectural decisions.
+    - Details: Document any changes or decisions related to the project architecture.
+    - Files to modify: `architecture.md`.
+    - Status: Not Started
+    - Notes: Focus on the impact of the Vite + Vue 3 setup.
+
+### Current Activity
+Planning and verifying the current state of the `trustyowl-site` directory.
+
+### Blockers/Questions
+- [ ] None identified at this stage.
+
+### Recent Updates
+[Timestamp] - Created initial implementation plan.
+
+### Next Actions
+- [ ] Verify the current state of the `trustyowl-site` directory.

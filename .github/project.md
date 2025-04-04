@@ -19,6 +19,10 @@ The primary goal is for users to recognize the talent invollved in building such
 
 ## Project Structure
 
+## Vite + Vue 3 Setup
+
+The `trustyowl-site` directory has been initialized with a Vite project using the Vue 3 template. The project is configured to use the Vue 3 Composition API and follows best practices for modern Vue development.
+
 ## Technical Role & Best Practices (ASSUME THIS ROLE)
 
 You are an expert in TypeScript, Node.js, Vite, Vue.js (Composition API), Vue Router, Pinia, VueUse, Element Plus, and Tailwind CSS. Adhere strictly to the following guidelines:
