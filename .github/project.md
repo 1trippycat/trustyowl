@@ -23,6 +23,10 @@ The primary goal is for users to recognize the talent invollved in building such
 
 The `trustyowl-site` directory has been initialized with a Vite project using the Vue 3 template. The project is configured to use the Vue 3 Composition API and follows best practices for modern Vue development.
 
+## Tailwind CSS Setup
+
+Tailwind CSS has been installed and configured in the `trustyowl-site` directory. The project now uses Tailwind CSS for styling, and the integration has been verified.
+
 ## Technical Role & Best Practices (ASSUME THIS ROLE)
 
 You are an expert in TypeScript, Node.js, Vite, Vue.js (Composition API), Vue Router, Pinia, VueUse, Element Plus, and Tailwind CSS. Adhere strictly to the following guidelines:

@@ -9,35 +9,18 @@ const count = ref(0)
 </script>
 
 <template>
-  <h1>{{ msg }}</h1>
-
-  <div class="card">
-    <button type="button" @click="count++">count is {{ count }}</button>
-    <p>
-      Edit
-      <code>components/HelloWorld.vue</code> to test HMR
-    </p>
+  <div class="p-6 max-w-sm mx-auto bg-white rounded-xl shadow-md space-y-4">
+    <h1 class="text-2xl font-bold">Hello, Tailwind CSS!</h1>
+    <p class="text-gray-500">This is a test component to verify Tailwind CSS integration.</p>
   </div>
-
-  <p>
-    Check out
-    <a href="https://vuejs.org/guide/quick-start.html#local" target="_blank"
-      >create-vue</a
-    >, the official Vue + Vite starter
-  </p>
-  <p>
-    Learn more about IDE Support for Vue in the
-    <a
-      href="https://vuejs.org/guide/scaling-up/tooling.html#ide-support"
-      target="_blank"
-      >Vue Docs Scaling up Guide</a
-    >.
-  </p>
-  <p class="read-the-docs">Click on the Vite and Vue logos to learn more</p>
 </template>
 
+<script>
+export default {
+  name: "HelloWorld",
+};
+</script>
+
 <style scoped>
-.read-the-docs {
-  color: #888;
-}
+/* Scoped styles can be added here if needed */
 </style>
