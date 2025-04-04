@@ -160,6 +160,15 @@ This workflow focuses on efficiency, clarity, and best practices. I'll break it 
 
 ---
 
+### Lessons Learned
+
+- **Branch Naming:** Ensure the branch name matches the repository's default branch (e.g., `main` instead of `master`) to avoid conflicts during pull requests.
+- **Directory Context:** When working in subdirectories (e.g., `trustyowl-site`), remember that Git commands operate relative to the repository root.
+- **Staging Changes:** Always verify that all intended changes are staged before committing to avoid missing updates.
+- **Pull Request Creation:** Use the correct base branch (e.g., `main`) when creating pull requests to ensure proper integration.
+
+---
+
 ## Best Practices Recap
 
 - **Branching Strategy**: Always work on feature branches. Never commit directly to `master`.
