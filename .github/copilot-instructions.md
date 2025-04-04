@@ -111,8 +111,7 @@ Identify Knowledge Gaps & Learnings: As you work, note down significant insights
 Update Existing Documents: Instead of creating many new small files, integrate these learnings and context directly into the most relevant existing core document:
 #file:architecture.md (For system design, component interactions, data flow updates)
 #file:git-workflow.md (For process improvements or clarifications)
-#file:style_conventions.md (For new patterns or clarifications)
-#file:testing.md (For new testing techniques or common pitfalls)
+#file:style.md (For new patterns or clarifications)
 #file:progress.md (For high-level learnings applicable to overall project progress)
 #file:project.md (For updates to core functionality, tech stack, or high-level goals)
 Consolidate, Don't Duplicate: Ensure the information added enhances clarity and understanding within the existing structure. Avoid duplicating information already present.
