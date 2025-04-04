@@ -1,0 +1,27 @@
+{
+  "name": "trustyowl-site",
+  "version": "1.0.0",
+  "description": "A simple site to collect leads from small businesses looking to automate operations or leverage AI.",
+  "main": "src/main.jsx",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "keywords": [
+    "lead",
+    "automation",
+    "AI",
+    "small business"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "vite": "^2.6.4"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^1.0.0"
+  }
+}

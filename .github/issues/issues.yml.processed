@@ -1,0 +1,49 @@
+issues:
+  - title: 'Deployment: Configure Vite for GitHub Pages'
+    labels: [deployment, setup, frontend]
+    body: |
+      **Task:** Update the Vite configuration (`vite.config.js`) to support deployment to GitHub Pages.
+      **Details:**
+      - Determine the correct `base` path for GitHub Pages deployment (e.g., `'/repo-name/'` where `repo-name` is your GitHub repository name).
+      - Set the `base` option in `vite.config.js` to this path. This ensures assets are loaded correctly when deployed to the subdirectory structure of GitHub Pages.
+      - Reference Vite documentation on the `base` option: https://vitejs.dev/config/shared-options.html#base
+      **Post-Task:** Update relevant documentation files (`project.md`, `progress.md`, `architecture.md`, `style_conventions.md` regarding build config) with decisions & status.
+
+  - title: 'Deployment: Setup GitHub Actions Workflow for GitHub Pages'
+    labels: [deployment, setup, ci/cd]
+    body: |
+      **Task:** Create a GitHub Actions workflow to automatically build and deploy the Vite application to GitHub Pages.
+      **Details:**
+      - Create a new workflow file (e.g., `.github/workflows/deploy.yml`).
+      - Configure the workflow to trigger on pushes to the main branch (or your preferred deployment branch).
+      - Workflow steps should include:
+        - Checking out the repository code.
+        - Setting up Node.js.
+        - Installing dependencies (`npm install`).
+        - Building the Vite project (`npm run build`). Ensure the build command uses the correct `base` path configured in the previous task.
+        - Using a deployment action (e.g., `peaceiris/actions-gh-pages`) to push the contents of the build output directory (`dist` by default) to the `gh-pages` branch.
+      - Ensure necessary permissions are set for the action to push to the `gh-pages` branch.
+      **Post-Task:** Update relevant documentation files (`project.md`, `progress.md`, `architecture.md`, `copilot-instructions.md` regarding deployment process) with workflow details & status.
+
+  - title: 'Deployment: Configure Repository for GitHub Pages'
+    labels: [deployment, setup]
+    body: |
+      **Task:** Enable and configure GitHub Pages in the repository settings.
+      **Details:**
+      - Navigate to your repository's Settings > Pages.
+      - Set the source branch for deployment to `gh-pages` (or whichever branch the GitHub Actions workflow deploys to).
+      - Select the `/ (root)` folder within that branch.
+      - Save the configuration and note the deployed site URL.
+      **Post-Task:** Update relevant documentation files (`project.md`, `progress.md`) with deployment URL & status.
+
+  - title: 'Deployment: Handle SPA Routing on GitHub Pages (If Using History Mode)'
+    labels: [deployment, frontend, routing]
+    body: |
+      **Task:** Investigate and implement necessary workarounds if using Vue Router in `history` mode for deployment on GitHub Pages.
+      **Details:**
+      - GitHub Pages doesn't natively support SPA history mode routing (direct navigation to sub-paths fails on refresh).
+      - If `history` mode is used, research common solutions like:
+        - The `404.html` redirect hack (copying `index.html` to `404.html` with potential script adjustments).
+        - Using `hash` mode in Vue Router instead (simpler for GitHub Pages deployment, but changes URL format).
+      - Implement the chosen solution if needed. If `hash` mode is used, this task may not require action.
+      **Post-Task:** Update relevant documentation files (`project.md`, `progress.md`, `architecture.md`) with routing decisions, implementation details & status.
