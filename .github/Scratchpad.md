@@ -118,3 +118,51 @@ Planning and preparing to install Tailwind CSS.
 
 ### Next Actions
 - [ ] Install Tailwind CSS and its dependencies.
+
+---
+
+## Issue Details
+Issue #: 3
+Title: Setup: Integrate Google Fonts (Playfair Display, Poppins)
+Description:
+The task involves integrating the Google Fonts "Playfair Display" and "Poppins" into the `trustyowl-site` directory. This includes updating the HTML and CSS files to use these fonts.
+
+## Acceptance Criteria
+- [ ] Add the Google Fonts "Playfair Display" and "Poppins" to the project.
+- [ ] Update the `index.html` file to include the Google Fonts link.
+- [ ] Update the CSS to use the integrated fonts.
+- [ ] Verify that the fonts are applied correctly in the project.
+
+## Implementation Plan
+### Current Status: Planning Phase
+
+### Steps
+1. [ ] Add the Google Fonts link to the `index.html` file.
+    - Details: Include the link to "Playfair Display" and "Poppins" from Google Fonts.
+    - Files to modify: `index.html`.
+    - Status: Not Started
+    - Notes: Ensure the link is added in the `<head>` section.
+
+2. [ ] Update the CSS to use the integrated fonts.
+    - Details: Set "Playfair Display" as the font for headings and "Poppins" for body text.
+    - Files to modify: `src/style.css`.
+    - Status: Not Started
+    - Notes: Use appropriate CSS selectors to apply the fonts.
+
+3. [ ] Verify that the fonts are applied correctly in the project.
+    - Details: Test the integration by checking the font styles in the browser.
+    - Files to modify: None (verification only).
+    - Status: Not Started
+    - Notes: Ensure the fonts are displayed as expected.
+
+### Current Activity
+Planning and preparing to integrate Google Fonts.
+
+### Blockers/Questions
+- [ ] None identified at this stage.
+
+### Recent Updates
+[Timestamp] - Created initial implementation plan.
+
+### Next Actions
+- [ ] Add the Google Fonts link to the `index.html` file.
