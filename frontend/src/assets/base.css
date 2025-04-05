@@ -1,0 +1,57 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@layer base {
+  body {
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+  }
+
+  h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+  }
+}
+
+@layer utilities {
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
+  }
+  
+  .animate-blink {
+    animation: blink 5s infinite;
+  }
+  
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.8; }
+  }
+  
+  .animate-spin-slow {
+    animation: spin 20s linear infinite;
+  }
+  
+  .animate-spin-reverse {
+    animation: spin-reverse 20s linear infinite;
+  }
+  
+  @keyframes spin-reverse {
+    100% { transform: rotate(-360deg); }
+  }
+}
+
+/* Mobile navigation styles */
+.mobile-menu {
+  @apply hidden;
+}
+
+.mobile-nav-active {
+  @apply flex flex-col absolute top-full left-0 right-0 bg-white p-4 shadow-md z-40;
+}

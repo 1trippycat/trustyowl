@@ -12,15 +12,18 @@
     "test": "vitest"
   },
   "dependencies": {
+    "@vue/compiler-sfc": "^3.5.13",
     "@vueuse/core": "^10.7.2",
+    "granim": "^2.0.0",
     "pinia": "^2.1.7",
-    "vue": "^3.4.21",
+    "vue": "^3.5.13",
     "vue-router": "^4.2.5"
   },
   "devDependencies": {
     "@testing-library/user-event": "^14.5.2",
     "@testing-library/vue": "^8.0.1",
     "@types/node": "^20.11.5",
+    "@types/vue": "^2.0.0",
     "@vitejs/plugin-vue": "^5.0.4",
     "@vue/test-utils": "^2.4.3",
     "autoprefixer": "^10.4.16",
@@ -30,7 +33,7 @@
     "postcss": "^8.4.33",
     "prettier": "^3.1.1",
     "tailwindcss": "^3.4.1",
-    "typescript": "^5.2.2",
+    "typescript": "^5.8.2",
     "vite": "^6.2.5",
     "vitest": "^3.1.1",
     "vue-tsc": "^2.0.6"
